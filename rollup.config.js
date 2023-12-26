@@ -29,20 +29,17 @@ export default {
     {
       file: isDemo ? "test/dist/index.js" : "dist/index.js",
       format: "iife",
-      sourcemap: true,
-      // plugins: [terser()]
+      plugins: [terser()]
     },
     {
       file: isDemo ? "test/dist/index.cjs" : "dist/index.cjs",
       format: "cjs",
-      sourcemap: true,
-      // plugins: [terser()]
+      plugins: [terser()]
     },
     {
       file: isDemo ? "test/dist/index.mjs" : "dist/index.mjs",
       format: "esm",
-      sourcemap: true,
-      // plugins: [terser()]
+      plugins: [terser()]
     },
   ],
   plugins: [

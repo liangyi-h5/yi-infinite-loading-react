@@ -6,5 +6,8 @@ docs
 src
 test
 
+bablerc.json
 package-lock.json
 rollup.config.js
+tsconfig.json
+deploy.sh
