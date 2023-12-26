@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yi-infinite-loading-react/static/css/main.924e187e.css",
+    "main.js": "/yi-infinite-loading-react/static/js/main.e23d53d7.js",
+    "static/js/787.0f7dc5a1.chunk.js": "/yi-infinite-loading-react/static/js/787.0f7dc5a1.chunk.js",
+    "index.html": "/yi-infinite-loading-react/index.html",
+    "main.924e187e.css.map": "/yi-infinite-loading-react/static/css/main.924e187e.css.map",
+    "main.e23d53d7.js.map": "/yi-infinite-loading-react/static/js/main.e23d53d7.js.map",
+    "787.0f7dc5a1.chunk.js.map": "/yi-infinite-loading-react/static/js/787.0f7dc5a1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.924e187e.css",
+    "static/js/main.e23d53d7.js"
+  ]
+}
