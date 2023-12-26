@@ -4,6 +4,7 @@ demo
 node_modules
 docs
 src
+test
 
 package-lock.json
 rollup.config.js

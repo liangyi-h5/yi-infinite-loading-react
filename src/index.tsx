@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import './index.css'
 
-type Props = {
+export type YiInfiniteLoadingProps = {
   children?: React.ReactNode
   loadMore?: () => void
   offset?: number | string // Positioning offset
@@ -11,7 +11,7 @@ type Props = {
   hideLoading?: boolean // Hide the default loading effect
 }
 
-export const YiInfiniteLoading:React.FC<Props> = ( { children, loadMore, offset = 0, horization = false, finished = true, loading = false, hideLoading = false } ) => {
+export const YiInfiniteLoading:React.FC<YiInfiniteLoadingProps> = ( { children, loadMore, offset = 0, horization = false, finished = true, loading = false, hideLoading = false } ) => {
   const observerRef = useRef<HTMLSpanElement>(null)
   const viewport = useRef<number>(0)
   const observer = useRef<IntersectionObserver | undefined>(undefined)
