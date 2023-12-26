@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "A Infinite Loading Component for React (16.8+)!",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "build:test": "rollup -c --environment BUILD:demo",
-    "dev": "rollup -c --environment BUILD:demo && cd demo && npm start",
-    "build:demo": "rollup -c --environment BUILD:demo && cd demo && npm install && npm run build",
+    "dev": "npm run build && cd demo && npm start",
+    "build:demo": "npm run build && cd demo && npm install && npm run build",
     "pre-release": "git checkout main && git pull",
     "branch-merge": "git push --tags && git push",
     "release-patch": "npm run pre-release && npm version patch -m \"tag: Version updated to %s patch\" && npm run branch-merge",
@@ -34,11 +34,11 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/types/index.d.ts",
+        "types": "./dist/index.d.ts",
         "default": "./dist/index.mjs"
       },
       "require": {
-        "types": "./dist/types/index.d.ts",
+        "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       }
     },

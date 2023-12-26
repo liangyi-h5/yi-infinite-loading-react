@@ -1,0 +1,63 @@
+
+.yi-infinite-loading{
+  min-height: 1px;
+  position: relative;
+  padding: 8px;
+}
+.horization {
+  min-width: 1px;
+}
+.yi-infinite-loading-observer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background: green;
+  height: 1px;
+  width: 1px;
+  transform: translateY(-100px);
+  pointer-events:none;
+}
+.yi-loading{
+  line-height: 0px;
+  text-align: center;
+}
+.yi-loading span {
+  display: inline-block;
+  animation: yi-an 1.2s infinite;
+  -webkit-animation: yi-an 1.2s infinite;
+  width: 3px;
+  height: 3px;
+  background: #444;
+  border-radius: 50%;
+  margin: 2px;
+}
+.yi-loading span:nth-child(1) {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+}
+.yi-loading span:nth-child(2) {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+.yi-loading span:nth-child(3) {
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+@keyframes yi-an
+{
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

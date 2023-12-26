@@ -1,5 +1,6 @@
 import React, { Fragment, useCallback, useState } from 'react'
 import './App.css'
+// import YiInfiniteLoading from './src/index'
 import YiInfiniteLoading from 'yi-infinite-loading-react'
 function App() {
   const [loading, setLoading] = useState(false)
