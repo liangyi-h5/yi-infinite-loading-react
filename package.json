@@ -1,10 +1,10 @@
 {
   "name": "yi-infinite-loading-react",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Infinite Loading Component for React (16.8+)!",
   "type": "module",
   "main": "dist/index.js",
-  "homepage":"https://liangyi-h5.github.io/yi-infinite-loading-react",
+  "homepage": "https://liangyi-h5.github.io/yi-infinite-loading-react",
   "scripts": {
     "build": "rollup -c",
     "build:test": "rollup -c --environment BUILD:demo",
