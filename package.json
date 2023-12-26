@@ -4,6 +4,7 @@
   "description": "A Infinite Loading Component for React (16.8+)!",
   "type": "module",
   "main": "dist/index.js",
+  "homepage":"https://liangyi-h5.github.io/yi-infinite-loading-react",
   "scripts": {
     "build": "rollup -c",
     "build:test": "rollup -c --environment BUILD:demo",
@@ -44,7 +45,6 @@
     },
     "./package.json": "./package.json"
   },
-  "homepage": "https://github.com/liangyi-h5/yi-infinite-loading-react#readme",
   "devDependencies": {
     "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.20",
