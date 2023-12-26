@@ -9,9 +9,11 @@ export type YiInfiniteLoadingProps = {
   loading: boolean // Is loading ...
   finished: boolean // Is loading completed
   hideLoading?: boolean // Hide the default loading effect
+  className?: string
+  style?: any
 }
 
-export const YiInfiniteLoading:React.FC<YiInfiniteLoadingProps> = ( { children, loadMore, offset = 0, horization = false, finished = true, loading = false, hideLoading = false } ) => {
+export const YiInfiniteLoading:React.FC<YiInfiniteLoadingProps> = ( { style = '', className = '', children, loadMore, offset = 0, horization = false, finished = true, loading = false, hideLoading = false } ) => {
   const observerRef = useRef<HTMLSpanElement>(null)
   const viewport = useRef<number>(0)
   const observer = useRef<IntersectionObserver | undefined>(undefined)
@@ -36,9 +38,11 @@ export const YiInfiniteLoading:React.FC<YiInfiniteLoadingProps> = ( { children, 
   const onLoadMore = useCallback(() => {
     if (loading || finished) return
     loadMore && loadMore()
-  }, [loading, finished])
+  }, [loading, finished, loadMore])
+
   useEffect(() => {
     if (observerRef.current) {
+      observer.current && observer.current.disconnect()
       const el = observerRef.current
       const screenView = window.visualViewport || window.screen
       viewport.current = horization ? screenView.width : screenView.height
@@ -52,9 +56,9 @@ export const YiInfiniteLoading:React.FC<YiInfiniteLoadingProps> = ( { children, 
     return () => {
       observer.current && observer.current.disconnect()
     }
-  }, [])
+  }, [observerRef, onLoadMore, viewport, horization])
   return (
-    <div className='yi-infinite-loading'>
+    <div className={'yi-infinite-loading' + className} style={style || ''}>
       <span
         ref={observerRef}
         className="yi-infinite-loading-observer"
