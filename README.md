@@ -1,5 +1,5 @@
 
-# infinite-loading-vue3
+# infinite-loading-react
 An infinite loading component for React (16.8+)!
 
 ## Installation

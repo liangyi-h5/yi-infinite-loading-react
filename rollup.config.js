@@ -27,13 +27,19 @@ export default {
   input: "src/index.tsx",
   output: [
     {
-      file: isDemo ? "demo/node_modules/yi-infinite-loading/index.js" : "dist/index.js",
+      file: isDemo ? "test/dist/index.js" : "dist/index.js",
+      format: "iife",
+      sourcemap: true,
+      // plugins: [terser()]
+    },
+    {
+      file: isDemo ? "test/dist/index.cjs" : "dist/index.cjs",
       format: "cjs",
       sourcemap: true,
       // plugins: [terser()]
     },
     {
-      file: isDemo ? "demo/node_modules/yi-infinite-loading/index.mjs" : "dist/index.mjs",
+      file: isDemo ? "test/dist/index.mjs" : "dist/index.mjs",
       format: "esm",
       sourcemap: true,
       // plugins: [terser()]
@@ -54,11 +60,10 @@ export default {
     }),
     resolve(),
     commonjs(),
-		copy({
+		copy(isDemo ? {
 			targets: [
-        { src: 'package.json', dest: "demo/node_modules/yi-infinite-loading/" },
-        { src: 'demo/node_modules/yi-infinite-loading/dist/index.d.ts', dest: "demo/node_modules/yi-infinite-loading/" },
+        isDemo ? { src: 'package.json', dest: "test/" } : null
       ]
-		})
+		} : {})
   ],
 };
